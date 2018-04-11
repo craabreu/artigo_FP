@@ -123,13 +123,6 @@ N.~A. Mohamed, R.~T. Bradshaw, J.~W. Essex, Evaluation of solvation free
 \newblock \href {http://dx.doi.org/10.1002/jcc.24500}
   {\path{doi:10.1002/jcc.24500}}.
 
-\bibitem{MATUBAYASI201745}
-N.~Matubayasi, Free-energy analysis of protein solvation with all-atom
-  molecular dynamics simulation combined with a theory of solutions, Curr.
-  Opin. Struct. Biol. 43 (2017) 45 -- 54.
-\newblock \href {http://dx.doi.org/https://doi.org/10.1016/j.sbi.2016.10.005}
-  {\path{doi:https://doi.org/10.1016/j.sbi.2016.10.005}}.
-
 \bibitem{doi:10.1021/acs.jctc.5b00963}
 S.~Genheden, Predicting partition coefficients with a simple
   all-atom/coarse-grained hybrid model, J. Chem. Theory Comput. 12~(1) (2016)
@@ -248,6 +241,13 @@ S.~Soroush, E.~J. Straver, E.~S.~J. Rudolph, C.~J. Peters, T.~W. de~Loos, P.~L.
 \newblock \href {http://dx.doi.org/https://doi.org/10.1016/j.fuel.2014.05.043}
   {\path{doi:https://doi.org/10.1016/j.fuel.2014.05.043}}.
 
+\bibitem{lafitte2013}
+T.~Lafitte, A.~Apostolakou, C.~Avendano, A.~Galindo, C.~S. Adjiman, E.~A.
+  Muller, G.~Jackson, Accurate statistical associating fluid theory for chain
+  molecules formed from mie segments, {J}. {C}hem. {P}hys. 139 (2013) 154504.
+\newblock \href {http://dx.doi.org/10.1063/1.4819786}
+  {\path{doi:10.1063/1.4819786}}.
+
 \bibitem{ramrattan2015}
 N.~Ramrattan, C.~Avenda{\~n}o, E.~M\"uller, A.~Galindo, A corresponding-states
   framework for the description of the mie family of intermolecular potentials,
@@ -282,13 +282,6 @@ A.~G. Osborn, D.~R. Douslin, Vapor pressures and derived enthalpies of
   (1975) 229--231.
 \newblock \href {http://dx.doi.org/10.1021/je60066a022}
   {\path{doi:10.1021/je60066a022}}.
-
-\bibitem{lafitte2013}
-T.~Lafitte, A.~Apostolakou, C.~Avendano, A.~Galindo, C.~S. Adjiman, E.~A.
-  Muller, G.~Jackson, Accurate statistical associating fluid theory for chain
-  molecules formed from mie segments, {J}. {C}hem. {P}hys. 139 (2013) 154504.
-\newblock \href {http://dx.doi.org/10.1063/1.4819786}
-  {\path{doi:10.1063/1.4819786}}.
 
 \bibitem{ervik2016}
 A.~Ervik, A.~Mej\'ia, E.~A. M\"uller, Bottled saft: A web app providing
@@ -385,6 +378,14 @@ C.~J.Chang, The solubility of carbon dioxide in organic solvents at elevated
   pressures, {F}luid {P}hase {E}quilib. 15 (1992) 235--242.
 \newblock \href {http://dx.doi.org/10.1016/0378-3812(92)85064-F}
   {\path{doi:10.1016/0378-3812(92)85064-F}}.
+
+\bibitem{ervik20162}
+A.~Ervik, M.~O. Lysgaard, C.~Herdes, G.~Jim\'enez-Serratos, E.~A. M\"ller,
+  S.~T. Munkejord, B.~M\"uller, A multiscale method for simulating fluid
+  interfaces covered with large molecules such as asphaltenes, ‎J. Comput.
+  Phys 327 (2016) 576--611.
+\newblock \href {http://dx.doi.org/10.1016/j.jcp.2016.09.039}
+  {\path{doi:10.1016/j.jcp.2016.09.039}}.
 
 \bibitem{doi:10.1021/ci034120c}
 A.~R. Katritzky, A.~A. Oliferenko, P.~V. Oliferenko, R.~Petrukhin, D.~B.
