@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: elsarticle-template.aux
+The style file: elsarticle-num.bst
+Database file #1: mybibfile.bib
+Warning--I didn't find a database entry for "MIE"
+You've used 63 entries,
+            2937 wiz_defined-function locations,
+            1126 strings with 19077 characters,
+and the built_in function-call counts, 20870 in all, are:
+= -- 2124
+> -- 699
+< -- 0
++ -- 275
+- -- 212
+* -- 1830
+:= -- 2910
+add.period$ -- 124
+call.type$ -- 63
+change.case$ -- 63
+chr.to.int$ -- 0
+cite$ -- 63
+duplicate$ -- 492
+empty$ -- 2120
+format.name$ -- 265
+if$ -- 5210
+int.to.chr$ -- 0
+int.to.str$ -- 63
+missing$ -- 63
+newline$ -- 258
+num.names$ -- 63
+pop$ -- 246
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1195
+stack$ -- 0
+substring$ -- 1498
+swap$ -- 188
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 147
+width$ -- 65
+write$ -- 633
+(There was 1 warning)
