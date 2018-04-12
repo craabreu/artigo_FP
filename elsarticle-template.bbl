@@ -373,6 +373,17 @@ H.~Kamberaj, R.~Low, M.~Neal, Time reversible and symplectic integrators for
 \newblock \href {http://dx.doi.org/10.1063/1.1906216}
   {\path{doi:10.1063/1.1906216}}.
 
+\bibitem{playmol}
+C.~R.~A. ABREU, Playmol, \url{http://atoms.peq.coppe.ufrj.br/playmol
+  /index.html}, accessed: 2017-03-10 (2017).
+
+\bibitem{packmol}
+L.~Mart\'inez, R.~Andrade, E.~G. Birgin, J.~M. Mart\'inez, Packmol: a package
+  for building initial configurations for molecular dynamics simulations, J.
+  Comput. Chem. 30 (2009) 2157--2164.
+\newblock \href {http://dx.doi.org/10.1002/jcc.21224}
+  {\path{doi:10.1002/jcc.21224}}.
+
 \bibitem{co2toliq}
 C.~J.Chang, The solubility of carbon dioxide in organic solvents at elevated
   pressures, {F}luid {P}hase {E}quilib. 15 (1992) 235--242.
