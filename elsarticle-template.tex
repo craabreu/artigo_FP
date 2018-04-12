@@ -66,7 +66,7 @@
 	
 	The parameter $\epsilon$ is the potential well depth, $\sigma$ is the segment diameter, r is the distance between the spherical segments, $\lambda_r$ is the repulsive exponent, and $\lambda_a$ is the attractive exponent. This force field has the advantage of incorporating the degrees of freedom provided by the use of the Mie Potential \cite{herdes2015}. This flexibility offers the exploration of a vast parameter space without using an iterative simulation scheme \cite{avendano2011}. Despite these advantages, the force field can be restricted by the shortcomings of the equation of state. As an example, the lack of an association term in the equation can cause an inadequate representation of the properties of hydrogen bonding compounds.
 	
-	Each substance has initially five parameters to be estimated ($m_s,\ \sigma,\ \epsilon,\ \lambda_{r},$ and, $ \lambda_{a}$) according to Eq. \ref{eqn:miepotential}. The number of segments is usually fixed in an integer value so as this parameters can be used in molecular simulations. The attractive parameter is generally fixed due to its high correlation with the repulsive parameter. Usually, the chosen value for this parameter is 6, corresponding to the London model, which is a good representation of the dispersion scale of most simple fluids that do not have strong polar interactions \cite{ramrattan2015,herdes2015}.  There are two strategies to obtain these parameters: one is by fitting the SAFT-VR Mie EoS to experimental data such as vapor pressure and liquid density \cite{avendano2013}, and the other one is by using corresponding states parametrization \cite{mejia2014}. Here, the first strategy was used to find the parameters for phenanthrene with vapor pressure data \cite{murphy,osborn} following the methodology proposed by M\"{u}ller and Mej\'{\i}a \cite{muller2017}.  The parameterization was carried out with the number of segments equal to five and with a geometry such as that in Figure \ref{fig:fen5}, since this level of coarse-graining was also used for a similar molecule (anthracene) in the original paper. We also show her the vapor pressure curve obtained using the EoS with the parameters estimated by us in Figure \ref{fig:edefit}.
+	Each substance has initially five parameters to be estimated ($m_s,\ \sigma,\ \epsilon,\ \lambda_{r},$ and, $ \lambda_{a}$) according to Eq. \ref{eqn:miepotential}. The number of segments is usually fixed in an integer value so as this parameters can be used in molecular simulations. The attractive parameter is generally fixed due to its high correlation with the repulsive parameter. Usually, the chosen value for this parameter is 6, corresponding to the London model, which is a good representation of the dispersion scale of most simple fluids that do not have strong polar interactions \cite{ramrattan2015,herdes2015}.  There are two strategies to obtain these parameters: one is by fitting the SAFT-VR Mie EoS to experimental data such as vapor pressure and liquid density \cite{avendano2013}, and the other one is by using corresponding states parametrization \cite{mejia2014}. Here, the first strategy was used to find the parameters for phenanthrene with vapor pressure data \cite{murphy,osborn} following the methodology proposed by M\"{u}ller and Mej\'{\i}a \cite{muller2017}.  The parameterization was carried out with the number of segments equal to five and with a geometry such as that in Figure \ref{fig:fen5}, since this level of coarse-graining was also used for a similar molecule (anthracene) in the original paper. We also show in Figure \ref{fig:edefit} the vapor pressure curve obtained using the EoS with the parameters estimated here.
 	
 	\begin{figure}[th]
 		\centering
@@ -75,8 +75,8 @@
 		\label{fig:fen5}
 	\end{figure}
 	
-		\begin{figure}[th]
-			\centering
+		\begin{figure}[h]
+            \raggedleft
 			\includegraphics[width=1.0\linewidth]{Figures/eos}
 			\caption{Vapor pressure of phenanthrene ($P_{v}$) calculated using the SAFT-VR Mie EoS with the parameters estimated here.}
 			\label{fig:edefit}
@@ -123,7 +123,7 @@
 	
 	\subsection{Expanded Ensemble}
 	
-	The strategy chosen in this work to calculate the solvation free energy differences  was to use an alchemical method in which the solute molecule is gradually inserted in the solvent using a  thermodynamic path \cite{klimovich}. Each insertion or alchemical state is represented by a coupling parameter, $\lambda$, that ranges from 0 to 1. When $\lambda=0$, there is no interaction with the solvent and, when $\lambda=1$, the interactions are fully activated. Since the force field used does not explicitly take in consideration  the charges, the interactions are only due to the Mie potential. For the coupling of the Mie Potential, we propose generalized softcore Mie potential based on the softcore potential of Beutler et al.  \cite{beutler} :
+	The strategy chosen in this work to calculate the solvation free energy differences  was to use an alchemical method in which the solute molecule is gradually inserted in the solvent using a  thermodynamic path \cite{klimovich}. Each insertion or alchemical state is represented by a coupling parameter, $\lambda$, that ranges from 0 to 1. When $\lambda=0$, there is no interaction with the solvent and, when $\lambda=1$, the interactions are fully activated. Since the force field used does not explicitly take in consideration  the charges, the interactions are only due to the Mie potential. For the coupling of the Mie Potential, we propose a generalized softcore Mie potential based on the softcore potential of Beutler et al.  \cite{beutler} :
 	\begin{equation}
 	\label{eq:miesoftcore}
 	\begin{aligned}
@@ -199,7 +199,7 @@
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.8\linewidth]{Figures/optimized_cdf}
+		\includegraphics[width=1.0\linewidth]{Figures/optimized_cdf}
 		\caption{Cumulative probability used to obtain the optimized values of $\lambda 's$ for the pair hexane+benzene.}
 		\label{fig:optimized_cdf}
 	\end{figure}
@@ -229,21 +229,21 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{Figures/hexart}
-		\caption{Representation of solvation free energies of different solutes in hexane corresponding to each alchemical state.}
+		\caption{Representation of solvation free energies of different solutes in hexane estimated at each alchemical state.}
 		\label{fig:hex}
 	\end{figure}
 	
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1.0\linewidth]{Figures/octart}
-		\caption{Representation of solvation free energies of different solutes in 1-octanol corresponding to each alchemical state.}
+		\caption{Representation of solvation free energies of different solutes in 1-octanol estimated at each alchemical state.}
 		\label{fig:oct}
 	\end{figure}
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Figures/tolart}
-		\caption{Representation of solvation free energy profiles obtained with MD simulations of different solutes in toluene. }
+		\caption{Representation of solvation free energies of different solutes in toluene estimated at each alchemical state. }
 		\label{fig:tol}
 	\end{figure}
 	
@@ -310,7 +310,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=1.0\linewidth]{Figures/waterart}
-		\caption{Representation of hydration free energies of different solutes corresponding to each alchemical state.}
+		\caption{Representation of hydration free energies of different solutes estimated at each alchemical state.}
 		\label{fig:water}
 	\end{figure}
 	
@@ -366,7 +366,7 @@
 			\hline\hline   
 		\end{tabular}
 	\end{table}
-	\begin{table*}[h]
+	\begin{table}[h]
 		\centering
 		\caption{Optimized values of $\lambda $ and $\eta$ for the 1-octanol+solute pairs.}
 		\begin{tabular}{cccccc}
@@ -395,7 +395,7 @@
 			&        &    1.000    &    -13.768    &    1.000    &    -14.073    \\
 			\hline\hline
 		\end{tabular}
-	\end{table*}
+	\end{table}
 	\begin{table*}[h]
 		\centering
 		\caption{Optimized values of $\lambda $ and $\eta$ for the toluene+solute pairs.}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  11 APR 2018 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  12 APR 2018 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,11 +514,14 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 73--74
  [][] 
  []
 
-<Figures/eos.png, id=145, 714.67pt x 549.05125pt>
+<Figures/eos.png, id=145, 511.6716pt x 403.9893pt>
 File: Figures/eos.png Graphic file (type png)
  <use Figures/eos.png>
 Package pdftex.def Info: Figures/eos.png used on input line 80.
-(pdftex.def)             Requested size: 229.5pt x 176.31157pt.
+(pdftex.def)             Requested size: 229.5pt x 181.20172pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./Figures/fe5cg.png>]
 Overfull \hbox (1.02298pt too wide) in paragraph at lines 107--121
@@ -533,69 +536,63 @@ Overfull \hbox (14.37329pt too wide) detected at line 133
 [] []
  []
 
-[4 <./Figures/eos.png>] [5] [6]
-Package epstopdf Info: Source file: <Figures/optimized_cdf.eps>
-(epstopdf)                    date: 2018-01-29 16:03:33
-(epstopdf)                    size: 23169 bytes
-(epstopdf)             Output file: <Figures/optimized_cdf-eps-converted-to.pdf
->
-(epstopdf)                    date: 2018-03-02 13:35:02
-(epstopdf)                    size: 16790 bytes
-(epstopdf)             Command: <repstopdf --outfile=Figures/optimized_cdf-eps-
-converted-to.pdf Figures/optimized_cdf.eps>
-(epstopdf)             \includegraphics on input line 202.
-Package epstopdf Info: Output file is already uptodate.
 
-<Figures/optimized_cdf-eps-converted-to.pdf, id=253, 512.91624pt x 400.49625pt>
-File: Figures/optimized_cdf-eps-converted-to.pdf Graphic file (type pdf)
-<use Figures/optimized_cdf-eps-converted-to.pdf>
-Package pdftex.def Info: Figures/optimized_cdf-eps-converted-to.pdf used on inp
-ut line 202.
-(pdftex.def)             Requested size: 183.6007pt x 143.35965pt.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./Figures/eos.png>] [5] [6]
+<Figures/optimized_cdf.png, id=253, 519.6213pt x 407.121pt>
+File: Figures/optimized_cdf.png Graphic file (type png)
+
+<use Figures/optimized_cdf.png>
+Package pdftex.def Info: Figures/optimized_cdf.png used on input line 202.
+(pdftex.def)             Requested size: 229.5pt x 179.81091pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figures/hexart.png, id=262, 578.16pt x 433.62pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures/hexart.png, id=262, 521.0667pt x 395.7987pt>
 File: Figures/hexart.png Graphic file (type png)
  <use Figures/hexart.png>
 Package pdftex.def Info: Figures/hexart.png used on input line 231.
-(pdftex.def)             Requested size: 229.5pt x 172.12163pt.
+(pdftex.def)             Requested size: 229.5pt x 174.3271pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figures/octart.png, id=263, 578.16pt x 433.62pt>
+<Figures/octart.png, id=263, 521.0667pt x 401.5803pt>
 File: Figures/octart.png Graphic file (type png)
  <use Figures/octart.png>
 Package pdftex.def Info: Figures/octart.png used on input line 238.
-(pdftex.def)             Requested size: 229.5pt x 172.12163pt.
+(pdftex.def)             Requested size: 229.5pt x 176.87357pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figures/tolart.png, id=264, 578.16pt x 433.62pt>
+<Figures/tolart.png, id=264, 521.0667pt x 401.5803pt>
 File: Figures/tolart.png Graphic file (type png)
  <use Figures/tolart.png>
 Package pdftex.def Info: Figures/tolart.png used on input line 245.
-(pdftex.def)             Requested size: 229.5pt x 172.12163pt.
+(pdftex.def)             Requested size: 229.5pt x 176.87357pt.
 
-[7 <./Figures/optimized_cdf-eps-converted-to.pdf>]
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+ [7 <./Figures/optimized_cdf.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1082) has occurred while \output is active []
 
- [8 <./Figures/hexart.png> <./Figures/octart.png>]
-Underfull \vbox (badness 3907) has occurred while \output is active []
-
- [9 <./Figures/tolart.png>] [10] <Figures/waterart.png, id=358, 578.16pt x 433.
-62pt>
+ [8 <./Figures/hexart.png> <./Figures/octart.png>] [9 <./Figures/tolart.png>] [
+10]
+<Figures/waterart.png, id=330, 521.0667pt x 401.3394pt>
 File: Figures/waterart.png Graphic file (type png)
 
 <use Figures/waterart.png>
 Package pdftex.def Info: Figures/waterart.png used on input line 312.
-(pdftex.def)             Requested size: 229.5pt x 172.12163pt.
+(pdftex.def)             Requested size: 229.5pt x 176.76747pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -620,6 +617,7 @@ Missing character: There is no ê in font txr!
 Missing character: There is no ‚ in font txr!
 Missing character: There is no Ä in font txr!
 Missing character: There is no é in font txr!
+[12]
 Missing character: There is no ‚ in font txr!
 Missing character: There is no Ä in font txr!
 Missing character: There is no ì in font txr!
@@ -628,7 +626,6 @@ Underfull \hbox (badness 1137) in paragraph at lines 42--46
 []\OT1/txr/m/n/10 M. R. Shirts, J. D. Chodera, Sta-tis-ti-cally op-ti-
  []
 
-[12]
 Missing character: There is no ‚ in font txr!
 Missing character: There is no Ä in font txr!
 Missing character: There is no î in font txr!
@@ -657,13 +654,13 @@ Underfull \hbox (badness 1057) in paragraph at lines 142--147
 \OT1/txr/m/n/10 A. E. Dawid, A. Kolin-ski, Coarse-grained pro-
  []
 
+[13]
 Missing character: There is no ‚ in font txr!
 Missing character: There is no Ä in font txr!
 Missing character: There is no â in font txr!
 Missing character: There is no ‚ in font txr!
 Missing character: There is no Ä in font txr!
 Missing character: There is no ì in font txr!
-[13]
 Missing character: There is no ‚ in font txr!
 Missing character: There is no Ä in font txr!
 Missing character: There is no ì in font txr!
@@ -708,12 +705,12 @@ Underfull \hbox (badness 1762) in paragraph at lines 245--250
 \OT1/txr/m/n/10 seg-ments, J. Chem. Phys. 139 (2013) 154504.
  []
 
-
+[14]
 Underfull \hbox (badness 1867) in paragraph at lines 274--278
 []\OT1/txr/m/n/10 S. Mor-timer, R. Mur-phy, The va-por pres-sures
  []
 
-[14]
+
 Underfull \hbox (badness 1067) in paragraph at lines 280--285
 []\OT1/txr/m/n/10 A. G. Os-born, D. R. Douslin, Va-por pres-sures
  []
@@ -761,11 +758,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 485.
-[16] [17] [18]
+[16] [17
+
+] [18] [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 485.
  (./elsarticle-template.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 485.
@@ -775,13 +771,13 @@ Package rerunfilecheck Info: File `elsarticle-template.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 485.
  ) 
 Here is how much of TeX's memory you used:
- 7592 strings out of 494929
- 107156 string characters out of 6180142
- 216903 words of memory out of 5000000
+ 7581 strings out of 494929
+ 107041 string characters out of 6180142
+ 214890 words of memory out of 5000000
  10622 multiletter control sequences out of 15000+600000
  43087 words of font info for 107 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 34i,11n,31p,2674b,638s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,11n,31p,2674b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/
@@ -792,10 +788,10 @@ nts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb
 e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on elsarticle-template.pdf (18 pages, 580395 bytes).
+Output written on elsarticle-template.pdf (19 pages, 823765 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
+ 540 PDF objects out of 1000 (max. 8388607)
  491 compressed objects within 5 object streams
- 124 named destinations out of 1000 (max. 500000)
+ 125 named destinations out of 1000 (max. 500000)
  124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
