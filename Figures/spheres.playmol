@@ -1,0 +1,19 @@
+atom_type C
+bond_type * *
+mass C C
+
+atom C1 C
+for i from 2 to 5
+    atom C$i C
+    link C$i C1
+next
+
+build
+5
+C1 0 0 0
+C2 1 0 0
+C3 2 0 0
+C4 0.5 {sqrt(0.75)} 0
+C5 1.5 {sqrt(0.75)} 0
+
+write xyz spheres.xyz
