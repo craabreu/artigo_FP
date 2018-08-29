@@ -1,13 +1,12 @@
-\documentclass[final,12p,times,twocolumn]{elsarticle}
+\documentclass[preprint]{elsarticle}
 
-
-\usepackage{lineno,hyperref}
+\usepackage{hyperref}
 \usepackage{amsmath}
-\usepackage{pdfcomment}
-\usepackage{color}
-\usepackage{mhchem}
+%\usepackage{pdfcomment}
+%\usepackage{color}
+\usepackage[version=3]{mhchem}
 
-\modulolinenumbers[5]
+%\modulolinenumbers[5]
 
 \journal{Fluid Phase Equilibria}
 
@@ -18,7 +17,7 @@
 	
 	\begin{frontmatter}
 		
-		\title{Evaluation of the SAFT-$\gamma$ Mie force field with solvation free energy calculations}% \tnoteref{mytitlenote}}
+		\title{Evaluation of the SAFT-$\gamma$ Mie force field with solvation free energy calculations}
 		
 		\author{Isabela Q. Matos}
 		\author{Charlles R. A. Abreu \corref{mycorrespondingauthor}}
@@ -28,7 +27,7 @@
 		
 		
 		\begin{abstract}
-			Solvation free energies can be essential in the process of evaluating and developing force fields. In addition, they can be used to obtain a diversity of other thermodynamic properties such as Henry's law constants and partition coefficients, for instance. In this paper, we study the solvation of asphaltene-like molecules (polyaromatic hydrocarbons) in both aqueous and organic solvents by using a coarse-grained model known as the SAFT-$\gamma$ Mie force field. This model relies on a top-down approach in which the force-field parameters are obtained using an equation of state. The use of solvation free energy calculations to evaluate this force field can help in improving the model and increasing the scale in which these simulations can be applied. The results presented here were obtained by carrying out molecular dynamics simulations, with the expanded ensemble method being applied to sample an alchemical path. For this, we employed a softcore variant of the Mie potential. From the output of these simulations, we estimated free-energy differences by means of the MBAR method. The results with organic solvents exhibited low absolute deviations from experimental data. In turn, hydration free energy calculations required a binary interaction parameter to be estimated from molecular dynamics data, which displays a flaw in the top-down parameterization approach. Fortunately, however, a single binary parameter could be used for all pairs of polyaromatic hydrocarbons with water, proving that the SAFT-$\gamma$ Mie force field exhibits a suitable transferability property that deserves further investigation.
+		Solvation free energies can be essential in the process of evaluating and developing force fields. In addition, they can be used to obtain a diversity of other thermodynamic properties such as Henry's law constants and partition coefficients, for instance. In this paper, we study the solvation of asphaltene-like molecules (polyaromatic hydrocarbons) in both aqueous and organic solvents by using a coarse-grained model known as the SAFT-$\gamma$ Mie force field. This model relies on a top-down approach in which the force-field parameters are obtained using an equation of state. The use of solvation free energy calculations to evaluate this force field can help in improving the model and increasing the scale in which these simulations can be applied. The results presented here were obtained by carrying out molecular dynamics simulations, with the expanded ensemble method being applied to sample an alchemical path. For this, we employed a softcore variant of the Mie potential. From the output of these simulations, we estimated free-energy differences by means of the Multistate Bennett Acceptance Ratio method. The results with organic solvents exhibited low absolute deviations from experimental data. In turn, hydration free energy calculations required a binary interaction parameter to be estimated from molecular dynamics data, which displays a flaw in the top-down parameterization approach. Fortunately, however, a single binary parameter could be used for all pairs of polyaromatic hydrocarbons with water, proving that the SAFT-$\gamma$ Mie force field exhibits a suitable transferability property that deserves further investigation.
 		\end{abstract}
 		
 		
@@ -68,15 +67,15 @@
 	
 	For a substance whose molecule is modeled as a string of segments, one has initially five parameters to estimate, namely $\sigma$, $\epsilon$, $\lambda_r$, $\lambda_a$, and the number of segments $m_s$. The latter is usually fixed in an integer value so as to allow its use in molecular simulations. The attractive parameter is also generally fixed due to its high correlation with the repulsive parameter. The chosen value is usually $6$, corresponding to the London model, which is a good representation of the dispersion scale of most simple fluids with no strong polar interactions \cite{ramrattan2015,herdes2015}. There are two strategies to obtain these parameters: one is by fitting the SAFT-VR Mie EoS to experimental data such as vapor pressure and liquid density \cite{avendano2013}, and the other one is by using corresponding states parametrization \cite{mejia2014, muller2017}. Here, the first strategy was used to find the parameters for phenanthrene from vapor pressure data \cite{murphy,osborn} only. We adopted this procedure once we were not able to find publicly available data of saturated liquid density of phenanthrene and decided not to resort to the use of commercial databases. Despite this, the obtained parameters yield suitable solvation free-energy results, as will be shown in Sec.~\ref{sec:results}. However, they should not be used for calculations of volumetric properties of pure phenanthrene. The parameterization was carried out with the number of segments fixed to five and with a geometry such as that shown in Fig.~\ref{fig:fen5}. This level of coarse-graining was also used for a similar molecule (anthracene) by M\"{u}ller and Mej\'{i}a \cite{muller2017}. We also show in Fig.~\ref{fig:edefit} the vapor pressure curve obtained by using the SAFT-VR Mie EoS with the parameters estimated here.
 	
-	\begin{figure}[ht]
-		\includegraphics[width=0.9\columnwidth]{Figures/phenanthrene}
+	\begin{figure}
+		\includegraphics[width=0.9\columnwidth]{phenanthrene}
 		\caption{Level of coarse-graining and geometry chosen for the phenanthrene molecule.}
 		\label{fig:fen5}
 	\end{figure}
 	
-	\begin{figure}[h]
-		\includegraphics[width=0.9\columnwidth]{Figures/eos}
-		\caption{Vapor pressure of phenanthrene ($P_{v}$) as a function of temperature. The symbols represent experimental data from Refs.~\citenum{murphy} and \citenum{osborn}. The curve is a result of calculations using the SAFT-VR Mie EoS with the geometry of Fiq.~\ref{fig:fen5} ($m_s = 5$), the London attractive exponent ($\lambda_a = 6$), and the remaining parameters estimated from those data ($\epsilon/k_b = 262.74 K$, $\sigma = 4.077 \AA$, and $\lambda_r = 9.55$).}
+	\begin{figure}
+		\includegraphics[width=0.9\columnwidth]{eos}
+		\caption{Vapor pressure of phenanthrene ($P_{v}$) as a function of temperature. The symbols represent experimental data from Refs.~\citenum{murphy} and \citenum{osborn}. The curve is a result of calculations using the SAFT-VR Mie EoS with the geometry of Fiq.~\ref{fig:fen5} ($m_s = 5$), the London attractive exponent ($\lambda_a = 6$), and the remaining parameters estimated from those data ($\epsilon/k_b$ = 262.74 K, $\sigma$ = 4.077 \AA, and $\lambda_r$ = 9.55).}
 		\label{fig:edefit}
 	\end{figure}
 	
@@ -96,7 +95,7 @@
 	
 	These mixing rules are available in the literature and have been employed in other papers in which this force field was used. In Eq.~\eqref{eqn:epsmix}, $k_{ij}$ is a binary interaction parameter. This parameter accounts for the interactions among chemically distinct compounds, which are not explicitly considered by the SAFT-VR Mie EoS. In our study, the binary interaction parameter was only necessary for aqueous mixtures.
 	
-	\begin{table}[h]
+	\begin{table}
 		\centering
 		\caption{SAFT-$\gamma$ Mie force field parameters used for each substance in this work. The well-depth parameter is presented as values of $\epsilon/k_b$ in $K$, where $k_b$ is the Boltzmann constant.}
 		\label{tbl:parameters}
@@ -147,9 +146,9 @@
 	\end{equation}
 	where $\Lambda$ is the actual, continuous value of the coupling parameter, $D(\Lambda)$ is the diffusivity at state $\Lambda$, $\Pi(\Lambda)$ is the probability density function, and $x(\Lambda)$ is the fraction of times that a simulation, being at state $\Lambda$, has most recently visited the state $\Lambda=1$ as opposed to state $\Lambda=0$. The flow rate $\phi$ is maximized if the probability density $\Pi(\Lambda)$ is proportional to $[D(\Lambda)]^{-1/2}$ \cite{escobedo2007,1742-5468-2006-03-P03018}, where $D(\Lambda)$ can be estimated (up to an additive constant) from Eq.~\eqref{eqn:stream} via finite differences. The optimal $\lambda$ states are then obtained iteratively using the inverse of a cumulative probability $\Phi(\lambda) = \int_0^\lambda \Pi(\Lambda) d\Lambda$. A graphical demonstration of the relation between the new optimized coupling parameters and the cumulative probability is presented in Figure \ref{fig:optimized_cdf}.
 	
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
-		\includegraphics[width=0.9\columnwidth]{Figures/optimized_cdf}
+		\includegraphics[width=0.9\columnwidth]{optimized_cdf}
 		\caption{Cumulative probability used to obtain the optimized coupling parameter staging for computing the solvation free energy of benzene in hexane using the SAFT-$\gamma$ Mie force field (see Sec.~\ref{sec:non-aqueous}).}
 		\label{fig:optimized_cdf}
 	\end{figure}
@@ -177,7 +176,7 @@
 	Additionally, the SAFT-$\gamma$ Mie force field presented better results for benzene/hexane than the TraPPE ($- 4.35 \pm 0.05$ kcal/mol, from Ref.~\citenum{garrido2011}) and the ELBA ($-2.92 \pm 0.01$ kcal/mol, from Ref.~\citenum{doi:10.1021/acs.jctc.5b00963}) force fields.
 	TraPPE is a force field parametrized with fluid-phase equilibrium data that uses the Lennard-Jones potential to describe the non-bonded interactions. In Ref.~\citenum{garrido2011}, the authors used the united-atom description of the TraPPE force field for the alkyl group, the all-atom description for the polar groups and the explicit-hydrogen approach for the aromatic groups. In the explicit-hydrogen approach, the interaction sites for all hydrogen atoms, some lone pair electrons, and bond centers are accounted for \cite{doi:10.1021/jp073586l}. In turn, the ELBA force field is a coarse-grained model that comprises Lennard-Jones parameters ($\sigma$ and $\epsilon$), bonded parameters, and dipole moments for polar beads. This force field models three carbon atoms as one Lennard-Jones site and one water molecule as a single Lennard Jones site with a point-dipole. We also present the solvation free energies corresponding to each alchemical state ($\lambda$) for all the solute/solvent pairs studied here in Figures \ref{fig:hex} to \ref{fig:tol}. Observing the solvation free energy in hexane (Fig.~\ref{fig:hex}) specifically, we can note the effect of molecule size (pyrene $>$ phenanthrene $>$ benzene) on the region of the free energy curve corresponding to the first values of $\lambda$ where the cavity required for inserting the solute is formed.
 	
-	\begin{table*}[h]
+	\begin{table*}
 		\centering
 		\caption{Solvation free energies (kcal/mol) in non-aqueous solvents calculated with the SAFT-$\gamma$ force field and experimental data.}
 		\label{tbl:solv1}
@@ -195,21 +194,21 @@
 			&
 		\end{tabular}
 	\end{table*}
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{Figures/hexart}
+		\includegraphics[width=1.0\linewidth]{hexart}
 		\caption{Representation of solvation free energies of different solutes in hexane calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state.}
 		\label{fig:hex}
 	\end{figure}
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{Figures/octart}
+		\includegraphics[width=1.0\linewidth]{octart}
 		\caption{Representation of solvation free energies of different solutes in 1-octanol calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state.}
 		\label{fig:oct}
 	\end{figure}
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{Figures/tolart}
+		\includegraphics[width=1.0\linewidth]{tolart}
 		\caption{Representation of solvation free energies of different solutes in toluene calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state. }
 		\label{fig:tol}
 	\end{figure}
@@ -327,9 +326,9 @@
 	We also observe that the hydration free energy corresponding to the first non-zero value of $\lambda$ is negative for benzene and toluene when a positive value is expected since free energy is required for cavity formation in the solvent for the insertion of the solute.
 	Determining the cause of this anomaly (whether it stems from the Mie potential parameters, the molecule geometry, or the binary interaction parameter) requires a deeper investigation that is beyond the scope of this article.
 	
-	\begin{figure}[h]
+	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{Figures/waterart}
+		\includegraphics[width=1.0\linewidth]{waterart}
 		\caption{Representation of hydration free energies of different solutes calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state.}
 		\label{fig:water}
 	\end{figure}
@@ -346,7 +345,7 @@
 
 	\section*{Acknowledgements}
 	
-	The authors thank the financial support provided by Cenpes/Petrobras (project code: 17.564). 
+	The authors acknowledge the financial support provided by Petrobras (project code CENPES 17.564). They are also grateful to Prof. Bruno Horta (IQ/UFRJ) for his helpful comments and suggestions.
 	
 	\section*{Appendix A. Supplementary Data}
 	
