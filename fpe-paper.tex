@@ -2,9 +2,9 @@
 
 \usepackage{hyperref}
 \usepackage{amsmath}
-%\usepackage{pdfcomment}
-%\usepackage{color}
 \usepackage[version=3]{mhchem}
+
+
 
 %\modulolinenumbers[5]
 
@@ -65,19 +65,25 @@
 	
 	In this model, $\epsilon$ is the potential well depth, $\sigma$ is the segment diameter, $r$ is the distance between two segments, $\lambda_r$ is the repulsive exponent, and $\lambda_a$ is the attractive exponent. Using the Mie potential instead of the more common Lennard-Jones model (which is a special case with $\lambda_r = 12$ and $\lambda_a = 6$) provides this force field with an advantageous flexibility \cite{herdes2015}. In addition, the possibility of using an equation of state in the parameter-fitting stage enables the exploration of a vast parameter space without using an iterative simulation scheme \cite{avendano2011}. Despite these advantages, the force field can be restricted by the shortcomings of the underlying equation of state. For instance, the lack of an association term can cause an inadequate representation of the properties of hydrogen-bonding compounds.
 	
-	For a substance whose molecule is modeled as a string of segments, one has initially five parameters to estimate, namely $\sigma$, $\epsilon$, $\lambda_r$, $\lambda_a$, and the number of segments $m_s$. The latter is usually fixed in an integer value so as to allow its use in molecular simulations. The attractive parameter is also generally fixed due to its high correlation with the repulsive parameter. The chosen value is usually $6$, corresponding to the London model, which is a good representation of the dispersion scale of most simple fluids with no strong polar interactions \cite{ramrattan2015,herdes2015}. There are two strategies to obtain these parameters: one is by fitting the SAFT-VR Mie EoS to experimental data such as vapor pressure and liquid density \cite{avendano2013}, and the other one is by using corresponding states parametrization \cite{mejia2014, muller2017}. Here, the first strategy was used to find the parameters for phenanthrene from vapor pressure data \cite{murphy,osborn} only. We adopted this procedure once we were not able to find publicly available data of saturated liquid density of phenanthrene and decided not to resort to the use of commercial databases. Despite this, the obtained parameters yield suitable solvation free-energy results, as will be shown in Sec.~\ref{sec:results}. However, they should not be used for calculations of volumetric properties of pure phenanthrene. The parameterization was carried out with the number of segments fixed to five and with a geometry such as that shown in Fig.~\ref{fig:fen5}. This level of coarse-graining was also used for a similar molecule (anthracene) by M\"{u}ller and Mej\'{i}a \cite{muller2017}. We also show in Fig.~\ref{fig:edefit} the vapor pressure curve obtained by using the SAFT-VR Mie EoS with the parameters estimated here.
+	For a substance whose molecule is modeled as a string of segments, one has initially five parameters to estimate, namely $\sigma$, $\epsilon$, $\lambda_r$, $\lambda_a$, and the number of segments $m_s$. The latter is usually fixed in an integer value so as to allow its use in molecular simulations. The attractive parameter is also generally fixed due to its high correlation with the repulsive parameter. The chosen value is usually $6$, corresponding to the London model, which is a good representation of the dispersion scale of most simple fluids with no strong polar interactions \cite{ramrattan2015,herdes2015}. There are two strategies to obtain these parameters: one is by fitting the SAFT-VR Mie EoS to experimental data such as vapor pressure and liquid density \cite{avendano2013}, and the other one is by using corresponding states parametrization \cite{mejia2014, muller2017}. Here, we used both strategies to find two set of parameters for phenanthrene. The first set (set 1) was found fitting the EoS to vapor pressure data \cite{murphy,osborn} only. We adopted this procedure because there is  no publicly available data of saturated liquid density of phenanthrene. Despite this, the obtained parameters yield suitable solvation free-energy results, as will be shown in Sec.~\ref{sec:results}. However, they should not be used for calculations of volumetric properties of pure phenanthrene. In order to fix this issue and include the saturated density in our estimation, we also calculated a second set of parameters (set 2) using the corresponding states parametrization. Both of these parameterizations were carried out with the number of segments fixed to five and with a geometry such as that shown in Fig.~\ref{fig:fen5}. This level of coarse-graining was also used for a similar molecule (anthracene) by M\"{u}ller and Mej\'{i}a \cite{muller2017}. We also show in Figs.~\ref{fig:edefitpv} and ~\ref{fig:edefitdens} the vapor pressure and liquid density curves obtained by using the SAFT-VR Mie EoS with the two set of parameters estimated here.
 	
 	\begin{figure}
-		\includegraphics[width=0.9\columnwidth]{phenanthrene}
+		\includegraphics[width=0.9\columnwidth]{Figures/phenanthrene.eps}
 		\caption{Level of coarse-graining and geometry chosen for the phenanthrene molecule.}
 		\label{fig:fen5}
 	\end{figure}
 	
 	\begin{figure}
-		\includegraphics[width=0.9\columnwidth]{eos}
-		\caption{Vapor pressure of phenanthrene ($P_{v}$) as a function of temperature. The symbols represent experimental data from Refs.~\citenum{murphy} and \citenum{osborn}. The curve is a result of calculations using the SAFT-VR Mie EoS with the geometry of Fiq.~\ref{fig:fen5} ($m_s = 5$), the London attractive exponent ($\lambda_a = 6$), and the remaining parameters estimated from those data ($\epsilon/k_b$ = 262.74 K, $\sigma$ = 4.077 \AA, and $\lambda_r$ = 9.55).}
-		\label{fig:edefit}
+		\includegraphics[width=0.9\columnwidth]{Figures/eospv}
+		\caption{Vapor pressure of phenanthrene ($P_{v}$) as a function of temperature. The symbols represent experimental data from Refs.~\citenum{murphy} and \citenum{osborn}. The blue curve is a result of calculations using the SAFT-VR Mie EoS with the first set of parameters ($\epsilon/k_b$ = 262.74 K, $\sigma$ = 4.077 \AA, and $\lambda_r$ = 9.55) and the red curve is the result with the second set of parameters ($\epsilon/k_b$ = 350.46 K, $\sigma$ = 3.689 \AA, and $\lambda_r$ = 13.58).}
+		\label{fig:edefitpv}
 	\end{figure}
+	
+		\begin{figure}
+			\includegraphics[width=0.9\columnwidth]{Figures/eosdens}
+			\caption{Liquid density of phenanthrene ($\rho_{L}$) as a function of temperature. The symbols represent experimental data from NIST \cite{LEMMON-RP91} . The blue curve is a result of calculations using the SAFT-VR Mie EoS with the first set of parameters ($\epsilon/k_b$ = 262.74 K, $\sigma$ = 4.077 \AA, and $\lambda_r$ = 9.55) and the red curve is the result with the second set of parameters ($\epsilon/k_b$ = 350.46 K, $\sigma$ = 3.689 \AA, and $\lambda_r$ = 13.58).}
+			\label{fig:edefitdens}
+		\end{figure}
 	
 	The parameters for the other compounds were retrieved from the literature, and all these parameters are displayed in Table~\ref{tbl:parameters}. The use of combining rules is necessary only when modeling a mixture with the SAFT-$\gamma$ Mie force field, since each molecule is composed of equal segments. The mixing rules employed for this force field are \cite{lafitte2013}
 	\begin{equation}
@@ -111,7 +117,8 @@
 			Benzene \cite{muller2017}        & 3     & 230.30               & 3.441              & 10.45       \\
 			Pyrene \cite{muller2017}         & 4     & 459.04               & 4.134              & 15.79       \\
 			Anthracene \cite{muller2017}     & 5     & 259.68               & 3.631              & 9.55        \\
-			Phenanthrene (new)               & 5     & 262.74               & 4.077              & 9.55        \\ \hline\hline
+			Phenanthrene (set 1)               & 5     & 262.74               & 4.077              & 9.55        \\
+			Phenanthrene (set 2)               & 5     & 350.46               & 3.689              & 13.58        \\ \hline\hline
 		\end{tabular}
 		
 	\end{table}
@@ -148,7 +155,7 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.9\columnwidth]{optimized_cdf}
+		\includegraphics[width=0.9\columnwidth]{Figures/optimized_cdf}
 		\caption{Cumulative probability used to obtain the optimized coupling parameter staging for computing the solvation free energy of benzene in hexane using the SAFT-$\gamma$ Mie force field (see Sec.~\ref{sec:non-aqueous}).}
 		\label{fig:optimized_cdf}
 	\end{figure}
@@ -171,7 +178,7 @@
 	\subsection{Solvation free energies in non-aqueous solvents}
 	\label{sec:non-aqueous}
 	
-	Our primary intention with this study is to assess the capability of the SAFT-$\gamma$ Mie force field to yield solvation free energies. For this, we have chosen benchmark solutes used in the literature (benzene and propane) and aromatic solutes (benzene, pyrene, phenanthrene, and anthracene), as well as non-polar (hexane), aromatic (toluene), and hydrogen-bonding (1-octanol and water) solvents. The solvation free energy simulations for the chosen solute-solvent pairs were carried out with binary interaction parameters set equal to zero since these parameters were not necessary according to our preliminary studies. As the force field does not explicitly account for charges, we only calculated the Mie contribution (Eq.~\eqref{eq:miesoftcore}) to the solvation free energy. A total of 15 to 18 $\lambda$ values, depending on the solute-solvent pairs, and their respective $\eta$ weights were estimated as described in the previous sections. The final $\lambda$ set for every pair was found using the cumulative probability distribution mentioned in Sec.~\ref{sec:expanded ensemble}. For the benzene/hexane case, such probability distribution can be seen in Fig.~\ref{fig:optimized_cdf}. Here and henceforth, we employ the terminology solute/solvent (in this order) to refer to the simulated pairs. The optimized values of $\lambda$ and $\eta$ for all pairs are provided in Tables S1 to S4 as supplementary material.
+	Our primary intention with this study is to assess the capability of the SAFT-$\gamma$ Mie force field to yield solvation free energies. For this, we have chosen benchmark solutes used in the literature (benzene and propane) and aromatic solutes (benzene, pyrene, phenanthrene, and anthracene), as well as non-polar (hexane), aromatic (toluene), and hydrogen-bonding (1-octanol and water) solvents. The solvation free energy simulations for the chosen solute-solvent pairs were carried out with binary interaction parameters set equal to zero since these parameters were not necessary according to our preliminary studies. For the solvation free energy of phenanthrene, the calculations were done for both set of parameters of Table \ref{tbl:parameters}.  As the force field does not explicitly account for charges, we only calculated the Mie contribution (Eq.~\eqref{eq:miesoftcore}) to the solvation free energy. A total of 15 to 18 $\lambda$ values, depending on the solute-solvent pairs, and their respective $\eta$ weights were estimated as described in the previous sections. The final $\lambda$ set for every pair was found using the cumulative probability distribution mentioned in Sec.~\ref{sec:expanded ensemble}. For the benzene/hexane case, such probability distribution can be seen in Fig.~\ref{fig:optimized_cdf}. Here and henceforth, we employ the terminology solute/solvent (in this order) to refer to the simulated pairs. The optimized values of $\lambda$ and $\eta$ for all pairs are provided in Tables S1 to S4 as supplementary material.
 	After the expanded ensemble simulations with the optimized intermediate states and weights, we calculated the solvation free energies with MBAR. The results obtained and the absolute deviations from experimental data \cite{doi:10.1021/ci034120c} are available in Table~\ref{tbl:solv1}. The absolute deviations of the solvation free energies in hexane were smaller than the deviations in other solvents.
 	Additionally, the SAFT-$\gamma$ Mie force field presented better results for benzene/hexane than the TraPPE ($- 4.35 \pm 0.05$ kcal/mol, from Ref.~\citenum{garrido2011}) and the ELBA ($-2.92 \pm 0.01$ kcal/mol, from Ref.~\citenum{doi:10.1021/acs.jctc.5b00963}) force fields.
 	TraPPE is a force field parametrized with fluid-phase equilibrium data that uses the Lennard-Jones potential to describe the non-bonded interactions. In Ref.~\citenum{garrido2011}, the authors used the united-atom description of the TraPPE force field for the alkyl group, the all-atom description for the polar groups and the explicit-hydrogen approach for the aromatic groups. In the explicit-hydrogen approach, the interaction sites for all hydrogen atoms, some lone pair electrons, and bond centers are accounted for \cite{doi:10.1021/jp073586l}. In turn, the ELBA force field is a coarse-grained model that comprises Lennard-Jones parameters ($\sigma$ and $\epsilon$), bonded parameters, and dipole moments for polar beads. This force field models three carbon atoms as one Lennard-Jones site and one water molecule as a single Lennard Jones site with a point-dipole. We also present the solvation free energies corresponding to each alchemical state ($\lambda$) for all the solute/solvent pairs studied here in Figures \ref{fig:hex} to \ref{fig:tol}. Observing the solvation free energy in hexane (Fig.~\ref{fig:hex}) specifically, we can note the effect of molecule size (pyrene $>$ phenanthrene $>$ benzene) on the region of the free energy curve corresponding to the first values of $\lambda$ where the cavity required for inserting the solute is formed.
@@ -185,30 +192,35 @@
 			Solute       & Solvent   & $\Delta G_\text{solv}^\text{exp}$ & $\Delta G_\text{solv}^\text{Mie}$ & Abs. Dev.  \\ \hline
 			benzene      & hexane    & -3.96                   & -3.76  $\,$ $\pm$ 0.01       & 0.20      &  \\
 			pyrene       & hexane    & -11.53                  & -10.82 $\pm$ 0.02       & 0.71      &  \\
-			phenanthrene & hexane    & -10.01                  & -9.16  $\,$ $\pm$ 0.01       & 0.85      &  \\
+			phenanthrene(set 1) & hexane    & -10.01                  & -9.16  $\,$ $\pm$ 0.01       & 0.85      &  \\
+			phenanthrene(set 2) & hexane    & -10.01                  & -9.63  $\,$ $\pm$ 0.01       & 0.38     &  \\
 			propane      & 1-octanol & -1.32                   & -1.36  $\,$ $\pm$ 0.03       & 0.04      &  \\
 			anthracene   & 1-octanol & -11.72                  & -8.12   $\,$ $\pm$ 0.03       & 3.61      &  \\
-			phenanthrene & 1-octanol & -10.22                  & -8.34  $\,$ $\pm$ 0.03       & 1.47      &  \\
+			phenanthrene(set 1) & 1-octanol & -10.22                  & -8.34  $\,$ $\pm$ 0.03       & 1.88      &  \\
+			phenanthrene(set 2) & 1-octanol & -10.22                  & -9.97  $\,$ $\pm$ 0.03       & 0.24     &  \\			
 			pyrene       & toluene   & -12.86                  & -11.74 $\pm$ 0.01       & 1.11      &  \\
-			anthracene   & toluene   & -11.31                  & -9.90 $\,$ $\pm$ 0.01        & 1.41      &  \\ \hline\hline
+			anthracene   & toluene   & -11.31                  & -9.90 $\,$ $\pm$ 0.01        & 1.41      &  \\ 
+			phenanthrene(set 1)   & toluene   & -                  & -10.65 $\pm$ 0.02      & -     &  \\ 
+			phenanthrene(set 2)   & toluene   & -                  & -10.786	 $\pm$  0.01        & -      &  \\ 
+			\hline\hline
 			&
 		\end{tabular}
 	\end{table*}
 	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{hexart}
+		\includegraphics[width=1.0\linewidth]{Figures/hexart}
 		\caption{Representation of solvation free energies of different solutes in hexane calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state.}
 		\label{fig:hex}
 	\end{figure}
 	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{octart}
+		\includegraphics[width=1.0\linewidth]{Figures/octart}
 		\caption{Representation of solvation free energies of different solutes in 1-octanol calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state.}
 		\label{fig:oct}
 	\end{figure}
 	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{tolart}
+		\includegraphics[width=1.0\linewidth]{Figures/tolart}
 		\caption{Representation of solvation free energies of different solutes in toluene calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state. }
 		\label{fig:tol}
 	\end{figure}
@@ -266,7 +278,8 @@
 				propane & $2.00 \pm 0.20$ & $1.10 \pm 0.01$ & 0.90 & $2.01 \pm 0.01$ & 0.01 \\
 				benzene & $-0.86 \pm 0.20$ & $-4.45 \pm 0.03$ &  3.59 & $-1.12 \pm 0.01$ & 0.26 \\
 				toluene & $-0.83 \pm 0.20$ & $-10.98 \pm 0.30$ &  10.15 & $-0.84 \pm 0.01$ & 0.01 \\
-				phenanthrene & $-3.88 \pm 0.60$ & $-10.90 \pm 0.04$ & 7.12 & $-3.47 \pm 0.02$ & 0.41 \\
+				phenanthrene (set 1)& $-3.88 \pm 0.60$ & $-10.90 \pm 0.04$ & 7.12 & $-3.47 \pm 0.02$ & 0.41 \\
+				phenanthrene (set 2)& $-3.88 \pm 0.60$ & $-10.90 \pm 0.04$ & 7.12 & $-5.12 \pm 0.02$ & 1.24 \\
 				\hline\hline
 			\end{tabular}
 	\end{table*}
@@ -328,7 +341,7 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=1.0\linewidth]{waterart}
+		\includegraphics[width=1.0\linewidth]{Figures/waterart}
 		\caption{Representation of hydration free energies of different solutes calculated using the SAFT-$\gamma$ Mie force field. Each point on the graph represents the solvation free energy difference estimated with MBAR at each alchemical state.}
 		\label{fig:water}
 	\end{figure}
